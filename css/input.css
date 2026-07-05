@@ -64,17 +64,6 @@
     color: #D86B4A;
   }
 
-  .menu-badge {
-    background-color: #D86B4A;
-    color: #fff;
-    font-size: 0.65rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    padding: 0.2rem 0.55rem;
-    border-radius: 9999px;
-    text-transform: uppercase;
-  }
-
   .sticky-book-bar {
     transform: translateY(100%);
     transition: transform 0.25s ease;
