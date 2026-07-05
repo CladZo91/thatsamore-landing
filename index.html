@@ -9,21 +9,83 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;500;600&display=swap');
-        body { font-family: 'Inter', system_ui, sans-serif; }
-        .heading-serif { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; line-height: 1.1; }
-        .btn-primary { background-color: #C65D3B; transition: all 0.3s ease; }
-        .btn-primary:hover { background-color: #A84D30; transform: translateY(-1px); }
-        .hero-overlay { background: linear-gradient(rgba(44, 37, 34, 0.45), rgba(44, 37, 34, 0.35)); }
+        
+        :root {
+            --bg-dark: #0F0C0A;
+            --bg-card: #1C1816;
+            --bg-elevated: #211E1B;
+            --border: #3A3530;
+            --text-primary: #F5EDE3;
+            --text-secondary: #B8A99A;
+            --text-muted: #8B7B6B;
+            --accent: #D86B4A;
+            --accent-dark: #B85A3A;
+        }
+
+        body { 
+            font-family: 'Inter', system_ui, sans-serif; 
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+        }
+        
+        .heading-serif { 
+            font-family: 'Playfair Display', Georgia, serif; 
+            font-weight: 700; 
+            line-height: 1.1; 
+        }
+
+        .nav-link {
+            transition: color 0.2s ease;
+        }
+        .nav-link:hover {
+            color: var(--accent);
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: var(--accent-dark);
+            transform: translateY(-1px);
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+        }
+
+        .section-dark {
+            background-color: var(--bg-card);
+        }
+
+        .text-muted {
+            color: var(--text-muted);
+        }
+
+        .text-secondary {
+            color: var(--text-secondary);
+        }
+
+        .hero-overlay {
+            background: linear-gradient(rgba(15, 12, 10, 0.65), rgba(15, 12, 10, 0.55));
+        }
+
+        .nav-scrolled {
+            background-color: rgba(28, 24, 22, 0.95) !important;
+            backdrop-filter: blur(12px);
+        }
     </style>
 </head>
-<body class="bg-[#F5EDE3] text-[#2C2522]">
+<body>
 
     <!-- Navbar -->
-    <nav id="navbar" class="bg-white border-b border-[#E6DCCB] sticky top-0 z-50">
+    <nav id="navbar" class="bg-[#1C1816] border-b border-[#3A3530] sticky top-0 z-50">
         <div class="max-w-screen-xl mx-auto">
             <div class="px-6 py-5 flex items-center justify-between">
                 <div class="flex items-center gap-x-3">
-                    <div class="w-9 h-9 bg-[#C65D3B] rounded-full flex items-center justify-center">
+                    <div class="w-9 h-9 bg-[#D86B4A] rounded-full flex items-center justify-center">
                         <span class="text-white text-2xl font-bold tracking-tighter">TA</span>
                     </div>
                     <div>
@@ -33,15 +95,15 @@
                 </div>
 
                 <div class="hidden md:flex items-center gap-x-9 text-sm font-medium">
-                    <a href="#menu" class="nav-link text-[#2C2522]">Menu</a>
-                    <a href="#book" class="nav-link text-[#2C2522]">Book a table</a>
-                    <a href="#visit" class="nav-link text-[#2C2522]">Visit us</a>
+                    <a href="#menu" class="nav-link text-[#F5EDE3]">Menu</a>
+                    <a href="#book" class="nav-link text-[#F5EDE3]">Book a table</a>
+                    <a href="#visit" class="nav-link text-[#F5EDE3]">Visit us</a>
                 </div>
 
                 <div class="flex items-center gap-x-3">
                     <a href="tel:093020645" 
-                       class="hidden sm:flex items-center gap-x-2 text-sm font-medium px-4 py-2 rounded-full hover:bg-[#F0E6D8] transition-colors">
-                        <i class="fa-solid fa-phone text-[#C65D3B]"></i>
+                       class="hidden sm:flex items-center gap-x-2 text-sm font-medium px-4 py-2 rounded-full hover:bg-[#211E1B] transition-colors">
+                        <i class="fa-solid fa-phone text-[#D86B4A]"></i>
                         <span class="font-medium">09 302 0645</span>
                     </a>
                     
@@ -52,7 +114,7 @@
                     </a>
 
                     <button id="mobile-menu-btn"
-                            class="md:hidden w-10 h-10 flex items-center justify-center text-[#2C2522]">
+                            class="md:hidden w-10 h-10 flex items-center justify-center text-[#F5EDE3]">
                         <i class="fa-solid fa-bars text-xl"></i>
                     </button>
                 </div>
@@ -60,13 +122,13 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden border-t border-[#E6DCCB] bg-white px-6 py-4">
+        <div id="mobile-menu" class="hidden md:hidden border-t border-[#3A3530] bg-[#1C1816] px-6 py-4">
             <div class="flex flex-col gap-y-3 text-sm font-medium">
                 <a href="#menu" class="py-1.5 nav-link">Menu</a>
                 <a href="#book" class="py-1.5 nav-link">Book a table</a>
                 <a href="#visit" class="py-1.5 nav-link">Visit us</a>
-                <div class="pt-3 border-t border-[#E6DCCB]">
-                    <a href="tel:093020645" class="flex items-center gap-x-2 text-[#C65D3B]">
+                <div class="pt-3 border-t border-[#3A3530]">
+                    <a href="tel:093020645" class="flex items-center gap-x-2 text-[#D86B4A]">
                         <i class="fa-solid fa-phone"></i>
                         <span class="font-medium">Call us: 09 302 0645</span>
                     </a>
@@ -85,7 +147,7 @@
         <div class="relative max-w-screen-xl mx-auto px-6 text-center text-white z-10">
             <div class="max-w-3xl mx-auto">
                 <div class="inline-flex items-center gap-x-2 bg-white/10 backdrop-blur-md px-4 py-1 rounded-full mb-6 border border-white/20">
-                    <div class="w-2 h-2 bg-[#C65D3B] rounded-full animate-pulse"></div>
+                    <div class="w-2 h-2 bg-[#D86B4A] rounded-full animate-pulse"></div>
                     <span class="text-sm font-medium tracking-wider">OPEN SINCE 2008 • NEW CBD LOCATION</span>
                 </div>
 
@@ -119,19 +181,19 @@
     </header>
 
     <!-- Trust bar -->
-    <div class="bg-white border-b border-[#E6DCCB] py-4">
+    <div class="bg-[#1C1816] border-b border-[#3A3530] py-4">
         <div class="max-w-screen-xl mx-auto px-6">
-            <div class="flex flex-wrap justify-center items-center gap-x-10 gap-y-3 text-sm text-[#5C5249]">
+            <div class="flex flex-wrap justify-center items-center gap-x-10 gap-y-3 text-sm text-[#B8A99A]">
                 <div class="flex items-center gap-x-2">
-                    <i class="fa-solid fa-check text-[#C65D3B]"></i>
+                    <i class="fa-solid fa-check text-[#D86B4A]"></i>
                     <span>Authentic Neapolitan pizza</span>
                 </div>
                 <div class="flex items-center gap-x-2">
-                    <i class="fa-solid fa-check text-[#C65D3B]"></i>
+                    <i class="fa-solid fa-check text-[#D86B4A]"></i>
                     <span>Quality Italian & NZ ingredients</span>
                 </div>
                 <div class="flex items-center gap-x-2">
-                    <i class="fa-solid fa-check text-[#C65D3B]"></i>
+                    <i class="fa-solid fa-check text-[#D86B4A]"></i>
                     <span>Open since 2008 • New CBD location</span>
                 </div>
             </div>
@@ -140,12 +202,12 @@
 
     <!-- Busy Period Warning -->
     <div class="max-w-screen-xl mx-auto px-6 pt-6">
-        <div class="bg-amber-50 border border-amber-200 rounded-2xl px-6 py-4 flex flex-col sm:flex-row items-start sm:items-center gap-x-4 gap-y-2">
+        <div class="bg-[#3F2A1E] border border-[#5C4633] rounded-2xl px-6 py-4 flex flex-col sm:flex-row items-start sm:items-center gap-x-4 gap-y-2">
             <div class="flex items-center gap-x-3">
-                <i class="fa-solid fa-exclamation-triangle text-amber-600 text-xl"></i>
-                <span class="font-semibold text-amber-900">Busy periods notice</span>
+                <i class="fa-solid fa-exclamation-triangle text-amber-400 text-xl"></i>
+                <span class="font-semibold text-amber-300">Busy periods notice</span>
             </div>
-            <div class="text-sm text-amber-800">
+            <div class="text-sm text-amber-200">
                 During weekends and peak hours (6:00 pm – 8:00 pm), wait times can be longer than usual. We recommend calling us on <a href="tel:093020645" class="font-medium underline">09 302 0645</a> to check current wait times before visiting.
             </div>
         </div>
@@ -155,10 +217,10 @@
     <section class="max-w-screen-xl mx-auto px-6 pt-10 pb-12">
         <div class="grid md:grid-cols-12 gap-x-12 items-center">
             <div class="md:col-span-7">
-                <div class="uppercase tracking-[3px] text-xs font-semibold text-[#C65D3B] mb-3">OUR STORY</div>
+                <div class="uppercase tracking-[3px] text-xs font-semibold text-[#D86B4A] mb-3">OUR STORY</div>
                 <h2 class="heading-serif text-5xl leading-none tracking-tighter mb-6">Making the perfect<br>pizza is all about the dough.</h2>
                 
-                <div class="max-w-prose text-[15px] leading-relaxed text-[#4A423B]">
+                <div class="max-w-prose text-[15px] leading-relaxed text-[#B8A99A]">
                     <p class="mb-4">That's Amore has been serving authentic Neapolitan pizza in Auckland since 2008. We follow a time-honoured recipe that originates from Naples, where over a century ago Pizzaiolo Pasquale created the original Margherita pizza for Queen Margherita using tomato, mozzarella, and basil, the colours of the Italian flag.</p>
                     <p>We combine traditional methods with the finest Italian and New Zealand ingredients to deliver the genuine Neapolitan pizza experience. Whether you are dining in or taking away, our focus is on quality and authenticity.</p>
                     <p class="mt-4">Come and taste the original.</p>
@@ -166,17 +228,17 @@
             </div>
             
             <div class="md:col-span-5 mt-10 md:mt-0">
-                <div class="bg-white rounded-3xl p-8 shadow-sm border border-[#E6DCCB]">
+                <div class="card rounded-3xl p-8">
                     <div class="flex items-center gap-x-4 mb-6">
-                        <div class="w-12 h-12 bg-[#F0E6D8] rounded-2xl flex items-center justify-center">
-                            <i class="fa-solid fa-users text-3xl text-[#C65D3B]"></i>
+                        <div class="w-12 h-12 bg-[#211E1B] rounded-2xl flex items-center justify-center">
+                            <i class="fa-solid fa-users text-3xl text-[#D86B4A]"></i>
                         </div>
                         <div>
                             <div class="font-semibold">Traditional Neapolitan methods</div>
                             <div class="text-sm text-[#8B7B6B]">Since 2008</div>
                         </div>
                     </div>
-                    <div class="text-sm text-[#4A423B]">
+                    <div class="text-sm text-[#B8A99A]">
                         We are proud to serve the real Neapolitan pizza using quality ingredients from Italy and New Zealand. Every pizza is made with care and respect for the original recipe.
                     </div>
                 </div>
@@ -188,16 +250,16 @@
     <section id="menu" class="max-w-screen-xl mx-auto px-6 pb-16">
         <div class="flex items-end justify-between mb-8">
             <div>
-                <div class="uppercase tracking-[3px] text-xs font-semibold text-[#C65D3B]">THE CLASSICS</div>
+                <div class="uppercase tracking-[3px] text-xs font-semibold text-[#D86B4A]">THE CLASSICS</div>
                 <h3 class="heading-serif text-4xl tracking-tighter">Menu Highlights</h3>
             </div>
-            <a href="#" class="hidden md:flex items-center text-sm font-medium text-[#C65D3B] hover:underline">
+            <a href="#" class="hidden md:flex items-center text-sm font-medium text-[#D86B4A] hover:underline">
                 View full menu <i class="fa-solid fa-arrow-right ml-2"></i>
             </a>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="pizza-card bg-white rounded-3xl overflow-hidden border border-[#E6DCCB] shadow-sm">
+            <div class="card pizza-card rounded-3xl overflow-hidden">
                 <div class="h-48 bg-cover bg-center" style="background-image: url('https://picsum.photos/id/292/600/400')"></div>
                 <div class="p-5">
                     <div class="flex justify-between items-start mb-2">
@@ -207,11 +269,11 @@
                         </div>
                         <div class="font-semibold text-lg tabular-nums">$18</div>
                     </div>
-                    <div class="text-xs text-[#5C5249]">The original. Simple, perfect.</div>
+                    <div class="text-xs text-[#B8A99A]">The original. Simple, perfect.</div>
                 </div>
             </div>
 
-            <div class="pizza-card bg-white rounded-3xl overflow-hidden border border-[#E6DCCB] shadow-sm">
+            <div class="card pizza-card rounded-3xl overflow-hidden">
                 <div class="h-48 bg-cover bg-center" style="background-image: url('https://picsum.photos/id/312/600/400')"></div>
                 <div class="p-5">
                     <div class="flex justify-between items-start mb-2">
@@ -221,11 +283,11 @@
                         </div>
                         <div class="font-semibold text-lg tabular-nums">$21</div>
                     </div>
-                    <div class="text-xs text-[#5C5249]">Our signature spicy favourite.</div>
+                    <div class="text-xs text-[#B8A99A]">Our signature spicy favourite.</div>
                 </div>
             </div>
 
-            <div class="pizza-card bg-white rounded-3xl overflow-hidden border border-[#E6DCCB] shadow-sm">
+            <div class="card pizza-card rounded-3xl overflow-hidden">
                 <div class="h-48 bg-cover bg-center" style="background-image: url('https://picsum.photos/id/106/600/400')"></div>
                 <div class="p-5">
                     <div class="flex justify-between items-start mb-2">
@@ -235,11 +297,11 @@
                         </div>
                         <div class="font-semibold text-lg tabular-nums">$16</div>
                     </div>
-                    <div class="text-xs text-[#5C5249]">Vegan friendly. Pure flavour.</div>
+                    <div class="text-xs text-[#B8A99A]">Vegan friendly. Pure flavour.</div>
                 </div>
             </div>
 
-            <div class="pizza-card bg-white rounded-3xl overflow-hidden border border-[#E6DCCB] shadow-sm">
+            <div class="card pizza-card rounded-3xl overflow-hidden">
                 <div class="h-48 bg-cover bg-center" style="background-image: url('https://picsum.photos/id/201/600/400')"></div>
                 <div class="p-5">
                     <div class="flex justify-between items-start mb-2">
@@ -249,13 +311,13 @@
                         </div>
                         <div class="font-semibold text-lg tabular-nums">$22</div>
                     </div>
-                    <div class="text-xs text-[#5C5249]">Rich, indulgent, unforgettable.</div>
+                    <div class="text-xs text-[#B8A99A]">Rich, indulgent, unforgettable.</div>
                 </div>
             </div>
         </div>
 
         <div class="mt-6 text-center">
-            <div class="inline-flex items-center gap-x-2 text-xs bg-[#F0E6D8] text-[#5C5249] px-4 py-1.5 rounded-full">
+            <div class="inline-flex items-center gap-x-2 text-xs bg-[#211E1B] text-[#B8A99A] px-4 py-1.5 rounded-full border border-[#3A3530]">
                 <i class="fa-solid fa-info-circle"></i>
                 <span>Full online ordering for pickup coming soon. Call us in the meantime.</span>
             </div>
@@ -265,17 +327,17 @@
     <!-- Book a Table -->
     <section id="book" class="max-w-screen-xl mx-auto px-6 py-16">
         <div class="max-w-2xl mx-auto text-center mb-10">
-            <div class="uppercase tracking-[3px] text-xs font-semibold text-[#C65D3B] mb-3">RESERVATIONS</div>
+            <div class="uppercase tracking-[3px] text-xs font-semibold text-[#D86B4A] mb-3">RESERVATIONS</div>
             <h2 class="heading-serif text-5xl tracking-tighter mb-4">Book a table online</h2>
-            <p class="text-lg text-[#4A423B] max-w-md mx-auto">We use ResDiary for online reservations. Book your table in seconds, perfect for lunch or dinner, especially on weekends when tables are limited.</p>
+            <p class="text-lg text-[#B8A99A] max-w-md mx-auto">We use ResDiary for online reservations. Book your table in seconds, perfect for lunch or dinner, especially on weekends when tables are limited.</p>
         </div>
 
         <div class="max-w-[620px] mx-auto">
-            <div class="bg-white rounded-3xl border border-[#E6DCCB] p-8 md:p-10 shadow-sm">
+            <div class="card rounded-3xl p-8 md:p-10">
                 <div class="text-center mb-8">
-                    <i class="fa-solid fa-calendar-check text-5xl text-[#C65D3B]"></i>
+                    <i class="fa-solid fa-calendar-check text-5xl text-[#D86B4A]"></i>
                     <h3 class="text-2xl font-semibold tracking-tight mt-4 mb-2">Reserve your table</h3>
-                    <p class="text-[#5C5249]">Use the live booking system below. Instant confirmation.</p>
+                    <p class="text-[#B8A99A]">Use the live booking system below. Instant confirmation.</p>
                 </div>
 
                 <div id="rd-widget-frame" style="max-width: 100%; margin: 0 auto;"></div>
@@ -285,35 +347,35 @@
                 </div>
             </div>
 
-            <div class="text-center mt-6 text-sm text-[#5C5249]">
-                Having trouble with the widget? Call us on <a href="tel:093020645" class="font-medium text-[#C65D3B] hover:underline">09 302 0645</a>
+            <div class="text-center mt-6 text-sm text-[#B8A99A]">
+                Having trouble with the widget? Call us on <a href="tel:093020645" class="font-medium text-[#D86B4A] hover:underline">09 302 0645</a>
             </div>
         </div>
     </section>
 
     <!-- Visit Us -->
-    <section id="visit" class="bg-white border-t border-[#E6DCCB] py-14">
+    <section id="visit" class="bg-[#1C1816] border-t border-[#3A3530] py-14">
         <div class="max-w-screen-xl mx-auto px-6">
             <div class="grid md:grid-cols-2 gap-x-16 gap-y-10 items-center">
                 <div>
-                    <div class="uppercase tracking-[3px] text-xs font-semibold text-[#C65D3B] mb-3">NEW LOCATION</div>
+                    <div class="uppercase tracking-[3px] text-xs font-semibold text-[#D86B4A] mb-3">NEW LOCATION</div>
                     <h3 class="heading-serif text-4xl tracking-tighter mb-6">Come and see us in the CBD</h3>
                     
                     <div class="space-y-5 text-[15px]">
                         <div>
                             <div class="font-semibold flex items-center gap-x-2">
-                                <i class="fa-solid fa-map-marker-alt w-5 text-[#C65D3B]"></i>
+                                <i class="fa-solid fa-map-marker-alt w-5 text-[#D86B4A]"></i>
                                 <span>Address</span>
                             </div>
-                            <div class="pl-7 text-[#4A423B]">57 Fort Street<br>Auckland CBD, Auckland 1010</div>
+                            <div class="pl-7 text-[#B8A99A]">57 Fort Street<br>Auckland CBD, Auckland 1010</div>
                         </div>
                         
                         <div>
                             <div class="font-semibold flex items-center gap-x-2">
-                                <i class="fa-solid fa-clock w-5 text-[#C65D3B]"></i>
+                                <i class="fa-solid fa-clock w-5 text-[#D86B4A]"></i>
                                 <span>Opening Hours</span>
                             </div>
-                            <div class="pl-7 text-[#4A423B] space-y-0.5">
+                            <div class="pl-7 text-[#B8A99A] space-y-0.5">
                                 <div>Monday – Sunday: 5:00 pm – 9:30 pm</div>
                                 <div class="text-xs text-[#8B7B6B]">Pickup available until 9:15 pm</div>
                             </div>
@@ -321,16 +383,16 @@
                         
                         <div>
                             <div class="font-semibold flex items-center gap-x-2">
-                                <i class="fa-solid fa-phone w-5 text-[#C65D3B]"></i>
+                                <i class="fa-solid fa-phone w-5 text-[#D86B4A]"></i>
                                 <span>Phone</span>
                             </div>
-                            <a href="tel:093020645" class="pl-7 text-[#C65D3B] font-medium hover:underline">09 302 0645</a>
+                            <a href="tel:093020645" class="pl-7 text-[#D86B4A] font-medium hover:underline">09 302 0645</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Google Maps Embed -->
-                <div class="w-full rounded-3xl overflow-hidden border border-[#E6DCCB] shadow-sm">
+                <div class="w-full rounded-3xl overflow-hidden border border-[#3A3530] shadow-sm">
                     <iframe 
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3192.8377288695588!2d174.76644017818637!3d-36.84636217937594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d47fb13c2729b%3A0x26fbc7b909c5d429!2sThat%27s%20Amore!5e0!3m2!1sen!2snz!4v1783273288799!5m2!1sen!2snz" 
                         width="100%" 
@@ -349,13 +411,13 @@
     <div class="max-w-screen-xl mx-auto px-6 py-12 text-center">
         <div class="max-w-md mx-auto">
             <h4 class="text-2xl font-semibold tracking-tight mb-3">Ready to enjoy real Neapolitan pizza?</h4>
-            <p class="text-[#5C5249] mb-6">Book your table or give us a call. We can't wait to welcome you.</p>
+            <p class="text-[#B8A99A] mb-6">Book your table or give us a call. We can't wait to welcome you.</p>
             
             <div class="flex flex-col sm:flex-row gap-3 justify-center">
                 <a href="#book" class="btn-primary text-white font-semibold px-8 py-3.5 rounded-2xl flex-1 sm:flex-none justify-center items-center flex gap-x-2">
                     Book a Table Online
                 </a>
-                <a href="tel:093020645" class="border border-[#C65D3B] text-[#C65D3B] font-semibold px-8 py-3.5 rounded-2xl flex-1 sm:flex-none justify-center items-center flex gap-x-2 hover:bg-[#F0E6D8]">
+                <a href="tel:093020645" class="border border-[#D86B4A] text-[#D86B4A] font-semibold px-8 py-3.5 rounded-2xl flex-1 sm:flex-none justify-center items-center flex gap-x-2 hover:bg-[#211E1B]">
                     <i class="fa-solid fa-phone"></i>
                     <span>Call 09 302 0645</span>
                 </a>
@@ -364,12 +426,12 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-[#2C2522] text-[#D9D0C3] text-sm">
+    <footer class="bg-[#12100E] text-[#D9D0C3] text-sm border-t border-[#3A3530]">
         <div class="max-w-screen-xl mx-auto px-6 py-12">
             <div class="flex flex-col md:flex-row justify-between gap-y-8">
                 <div>
                     <div class="flex items-center gap-x-3 mb-3">
-                        <div class="w-8 h-8 bg-[#C65D3B] rounded-full flex items-center justify-center">
+                        <div class="w-8 h-8 bg-[#D86B4A] rounded-full flex items-center justify-center">
                             <span class="text-white text-xl font-bold tracking-tighter">TA</span>
                         </div>
                         <span class="font-semibold text-white text-xl tracking-tight">That's Amore</span>
@@ -411,9 +473,9 @@
             const navbar = document.getElementById('navbar');
             window.addEventListener('scroll', () => {
                 if (window.scrollY > 20) {
-                    navbar.classList.add('nav-scrolled', 'bg-white/95', 'backdrop-blur-lg');
+                    navbar.classList.add('nav-scrolled');
                 } else {
-                    navbar.classList.remove('nav-scrolled', 'bg-white/95', 'backdrop-blur-lg');
+                    navbar.classList.remove('nav-scrolled');
                 }
             });
         }
@@ -464,7 +526,7 @@
             initNavbar();
             initMobileMenu();
             initSmoothScroll();
-            console.log('%c[That\'s Amore] Landing page updated with darker-friendly palette.', 'color:#8B7B6B');
+            console.log('%c[That\'s Amore] Dark theme applied successfully.', 'color:#8B7B6B');
         }
 
         window.onload = init;
