@@ -12,7 +12,7 @@
         X-Frame-Options "DENY"
         Referrer-Policy "strict-origin-when-cross-origin"
         Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
-        Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; script-src 'self' 'unsafe-inline' https://booking.resdiary.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://booking.resdiary.com; font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com https://booking.resdiary.com; img-src 'self' data: https:; frame-src https://www.google.com https://booking.resdiary.com; connect-src 'self' https://booking.resdiary.com https://cloudflareinsights.com https://static.cloudflareinsights.com"
+        Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://booking.resdiary.com https://js.stripe.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://booking.resdiary.com https://widget-themes.resdiary.com https://use.typekit.net; font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com https://booking.resdiary.com https://use.typekit.net; img-src 'self' data: https:; frame-src https://www.google.com https://booking.resdiary.com https://js.stripe.com https://hooks.stripe.com; connect-src 'self' https://booking.resdiary.com https://widget-themes.resdiary.com https://cloudflareinsights.com https://static.cloudflareinsights.com"
     }
 }
 
