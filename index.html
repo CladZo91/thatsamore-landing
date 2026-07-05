@@ -5,6 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>That's Amore • Authentic Neapolitan Pizza | Auckland CBD</title>
     <meta name="description" content="Authentic Neapolitan pizza in Auckland CBD since 2008. Book a table or order by phone. Traditional methods, quality ingredients, pickup available.">
+
+    <!-- Restaurant Schema for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "That's Amore",
+      "description": "Authentic Neapolitan pizza in Auckland CBD since 2008. Traditional methods using quality Italian and New Zealand ingredients.",
+      "url": "https://thatsamore.co.nz",
+      "telephone": "+64 9 302 0645",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "57 Fort Street",
+        "addressLocality": "Auckland CBD",
+        "addressRegion": "Auckland",
+        "postalCode": "1010",
+        "addressCountry": "NZ"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -36.84636,
+        "longitude": 174.76644
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+        ],
+        "opens": "17:00",
+        "closes": "21:30"
+      },
+      "servesCuisine": ["Italian", "Pizza", "Neapolitan"],
+      "priceRange": "$$",
+      "hasMenu": "https://thatsamore.co.nz/images/menu.pdf",
+      "image": "https://thatsamore.co.nz/images/WebsiteLogo_web_1200.webp"
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
@@ -198,7 +236,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             
             <!-- Margherita -->
-            <div class="card rounded-3xl overflow-hidden border border-[#3A3530]">
+            <div class="card rounded-3xl overflow-hidden border border-[#3A3530]" role="img" aria-label="Margherita pizza with tomato sauce, Fior di Latte, fresh basil and olive oil">
                 <div class="h-48 bg-cover bg-center" style="background-image: url('https://picsum.photos/id/292/600/400')"></div>
                 <div class="p-5">
                     <div class="font-semibold text-xl mb-1">Margherita</div>
@@ -208,7 +246,7 @@
             </div>
 
             <!-- Diavola -->
-            <div class="card rounded-3xl overflow-hidden border border-[#3A3530]">
+            <div class="card rounded-3xl overflow-hidden border border-[#3A3530]" role="img" aria-label="Diavola spicy pizza with salami, spinach, chili and Parmesan">
                 <div class="h-48 bg-cover bg-center" style="background-image: url('https://picsum.photos/id/312/600/400')"></div>
                 <div class="p-5">
                     <div class="font-semibold text-xl mb-1">Diavola</div>
@@ -218,7 +256,7 @@
             </div>
 
             <!-- Zola -->
-            <div class="card rounded-3xl overflow-hidden border border-[#3A3530]">
+            <div class="card rounded-3xl overflow-hidden border border-[#3A3530]" role="img" aria-label="Zola pizza with Gorgonzola, salami and rocket salad">
                 <div class="h-48 bg-cover bg-center" style="background-image: url('https://picsum.photos/id/106/600/400')"></div>
                 <div class="p-5">
                     <div class="font-semibold text-xl mb-1">Zola</div>
@@ -228,7 +266,7 @@
             </div>
 
             <!-- Tiramisu -->
-            <div class="card rounded-3xl overflow-hidden border border-[#3A3530]">
+            <div class="card rounded-3xl overflow-hidden border border-[#3A3530]" role="img" aria-label="Homemade Tiramisu dessert with mascarpone, savoiardi and espresso">
                 <div class="h-48 bg-cover bg-center" style="background-image: url('https://picsum.photos/id/201/600/400')"></div>
                 <div class="p-5">
                     <div class="font-semibold text-xl mb-1">Tiramisu</div>
@@ -313,7 +351,7 @@
                             <a href="tel:093020645" class="pl-7 text-[#D86B4A] font-medium hover:underline">09 302 0645</a>
                         </div>
 
-                        <!-- NEW: Google Review Button -->
+                        <!-- Google Review Button -->
                         <div class="pt-2">
                             <a href="https://g.page/r/CSnUxQm5x_smEBM/review" target="_blank"
                                class="inline-flex items-center gap-x-2 px-5 py-2.5 rounded-xl border border-[#D86B4A] text-[#D86B4A] hover:bg-[#D86B4A] hover:text-white transition-colors text-sm font-medium">
