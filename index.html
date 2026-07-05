@@ -6,6 +6,16 @@
     <title>That's Amore • Authentic Neapolitan Pizza | Auckland CBD</title>
     <meta name="description" content="Authentic Neapolitan pizza in Auckland CBD since 2008. Book a table or order by phone. Traditional methods, quality ingredients, pickup available.">
 
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="That's Amore • Authentic Neapolitan Pizza | Auckland CBD">
+    <meta property="og:description" content="Serving Auckland since 2008 — now on Fort Street. Book a table or call for pickup. Authentic Neapolitan pizza made with traditional methods.">
+    <meta property="og:url" content="https://thatsamore.co.nz">
+    <meta property="og:image" content="https://thatsamore.co.nz/images/hero-restaurant-interior.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="That's Amore • Authentic Neapolitan Pizza">
+    <meta name="twitter:description" content="Authentic Neapolitan pizza in Auckland CBD since 2008. Book online or call 09 302 0645.">
+    <meta name="twitter:image" content="https://thatsamore.co.nz/images/hero-restaurant-interior.jpg">
+
     <!-- Restaurant Schema for SEO -->
     <script type="application/ld+json">
     {
@@ -39,7 +49,13 @@
       "servesCuisine": ["Italian", "Pizza", "Neapolitan"],
       "priceRange": "$$",
       "hasMenu": "https://thatsamore.co.nz/images/menu.pdf",
-      "image": "https://thatsamore.co.nz/images/WebsiteLogo_web_1200.webp"
+      "image": "https://thatsamore.co.nz/images/WebsiteLogo_web_1200.webp",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "1066",
+        "bestRating": "5"
+      }
     }
     </script>
 
@@ -56,7 +72,7 @@
         <div class="max-w-screen-xl mx-auto">
             <div class="px-6 py-5 flex items-center justify-between">
                 <a href="/" class="flex items-center">
-                    <img src="/images/WebsiteLogo_web_1200.webp" alt="That's Amore" class="h-[85px] w-auto">
+                    <img src="/images/WebsiteLogo_web_1200.webp" alt="That's Amore" class="h-14 md:h-[85px] w-auto">
                 </a>
 
                 <div class="hidden md:flex items-center gap-x-9 text-sm font-medium">
@@ -113,14 +129,17 @@
             <div class="max-w-3xl mx-auto">
                 <div class="inline-flex items-center gap-x-2 bg-white/10 backdrop-blur-md px-4 py-1 rounded-full mb-6 border border-white/20">
                     <div class="w-2 h-2 bg-[#D86B4A] rounded-full animate-pulse"></div>
-                    <span class="text-sm font-medium tracking-wider">OPEN SINCE 2008 • NEW CBD LOCATION</span>
+                    <span class="text-sm font-medium tracking-wider">SERVING AUCKLAND SINCE 2008 — NOW ON FORT STREET</span>
                 </div>
 
                 <h1 class="heading-serif text-6xl md:text-7xl leading-[1.05] tracking-tighter mb-4">
                     Authentic<br>Neapolitan Pizza
                 </h1>
-                <p class="text-2xl md:text-3xl text-white/90 font-light tracking-tight mb-8">
-                    Auckland CBD • Traditional methods • Pickup available
+                <p class="text-2xl md:text-3xl text-white/90 font-light tracking-tight mb-4">
+                    Auckland CBD • Traditional methods • Dinner from 5 pm
+                </p>
+                <p class="text-base md:text-lg text-white/80 mb-8 max-w-xl mx-auto">
+                    Ideal for after-work dinners, date nights, and groups up to 6.
                 </p>
 
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -133,20 +152,28 @@
                     <a href="tel:+6493020645" 
                        class="w-full sm:w-auto bg-white/10 hover:bg-white/20 backdrop-blur border border-white/30 text-white text-lg font-semibold px-8 py-4 rounded-2xl flex items-center justify-center gap-x-3 transition-all">
                         <i class="fa-solid fa-phone"></i>
-                        <span>Order by Phone</span>
+                        <span>Call to Order Pickup</span>
                     </a>
 
-                    <!-- NEW: View Menu Button -->
                     <a href="#menu" 
-                       class="w-full sm:w-auto bg-white/10 hover:bg-white/20 backdrop-blur border border-white/30 text-white text-lg font-semibold px-8 py-4 rounded-2xl flex items-center justify-center gap-x-3 transition-all">
+                       class="hidden sm:inline-flex bg-white/10 hover:bg-white/20 backdrop-blur border border-white/30 text-white text-lg font-semibold px-8 py-4 rounded-2xl items-center justify-center gap-x-3 transition-all">
                         <i class="fa-solid fa-book-open"></i>
                         <span>View Menu</span>
                     </a>
                 </div>
+
+                <p class="mt-5 text-sm text-white/75">
+                    <span class="font-medium text-white">Dining in?</span> Book online.
+                    <span class="mx-2 text-white/40">|</span>
+                    <span class="font-medium text-white">Taking away?</span> Call 09 302 0645 — ready in 15–25 minutes.
+                </p>
+                <a href="#menu" class="sm:hidden inline-block mt-4 text-sm font-semibold text-[#E8C9A0] hover:text-white underline underline-offset-4">
+                    View our menu
+                </a>
                 
-                <div class="mt-8 text-sm text-white/70 flex items-center justify-center gap-x-2">
+                <div class="mt-6 text-sm text-white/70 flex items-center justify-center gap-x-2">
                     <i class="fa-solid fa-clock"></i>
-                    <span>Pickup in 15–25 minutes • No deliveries</span>
+                    <span>Open daily 5:00 pm – 9:30 pm • Pickup until 9:15 pm • No deliveries</span>
                 </div>
             </div>
         </div>
@@ -166,8 +193,30 @@
                 </div>
                 <div class="flex items-center gap-x-2">
                     <i class="fa-solid fa-check text-[#D86B4A]"></i>
-                    <span>Open since 2008 • New CBD location</span>
+                    <span>Serving Auckland since 2008 — Fort Street, CBD</span>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Google rating -->
+    <div class="bg-[#211E1B] border-b border-[#3A3530] py-4">
+        <div class="max-w-screen-xl mx-auto px-6">
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-x-3 gap-y-2 text-sm text-center">
+                <div class="flex items-center gap-x-1 text-[#E8C9A0]">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <span class="font-semibold text-white ml-1">4.8 on Google</span>
+                </div>
+                <span class="hidden sm:inline text-[#8B7B6B]">•</span>
+                <span class="text-[#B8A99A]">1,000+ reviews</span>
+                <span class="hidden sm:inline text-[#8B7B6B]">•</span>
+                <a href="https://g.page/r/CSnUxQm5x_smEBM/review" target="_blank" rel="noopener" class="font-medium text-[#D86B4A] hover:underline">
+                    Read reviews
+                </a>
             </div>
         </div>
     </div>
@@ -194,11 +243,14 @@
                 </div>
             </div>
             
-            <div class="md:col-span-5 mt-10 md:mt-0">
+            <div class="md:col-span-5 mt-10 md:mt-0 space-y-6">
+                <div class="rounded-3xl overflow-hidden border border-[#3A3530]">
+                    <img src="/images/diavola.jpg" alt="Fresh Neapolitan pizza from That's Amore" class="w-full h-64 object-cover" loading="lazy">
+                </div>
                 <div class="bg-[#1C1816] rounded-3xl p-8 border border-[#3A3530]">
                     <div class="flex items-center gap-x-4 mb-6">
                         <div class="w-12 h-12 bg-[#211E1B] rounded-2xl flex items-center justify-center">
-                            <i class="fa-solid fa-users text-3xl text-[#D86B4A]"></i>
+                            <i class="fa-solid fa-fire-burner text-3xl text-[#D86B4A]"></i>
                         </div>
                         <div>
                             <div class="font-semibold">Traditional Neapolitan methods</div>
@@ -228,23 +280,33 @@
             </a>
         </div>
 
+        <p class="text-[#B8A99A] text-sm mb-8 max-w-2xl">Regular 12&quot; pizzas from $24. Perfect for sharing over wine, or taking home after work.</p>
+
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
             <!-- Margherita -->
             <div class="card rounded-3xl overflow-hidden border border-[#3A3530]" role="img" aria-label="Margherita pizza with tomato sauce, Fior di Latte, fresh basil and olive oil">
                 <div class="h-48 bg-cover bg-center" style="background-image: url('/images/margherita.jpg')"></div>
                 <div class="p-5">
-                    <div class="font-semibold text-xl mb-1">Margherita</div>
+                    <div class="flex items-center justify-between gap-3 mb-1">
+                        <div class="font-semibold text-xl">Margherita</div>
+                        <div class="text-sm font-semibold text-[#D86B4A]">$24</div>
+                    </div>
                     <div class="text-sm text-[#B8A99A] mb-3">Tomato sauce, Fior di Latte, Basil, Olive Oil.</div>
                     <div class="text-xs text-[#8B7B6B]">The classic. Simple and perfect.</div>
                 </div>
             </div>
 
             <!-- Diavola -->
-            <div class="card rounded-3xl overflow-hidden border border-[#3A3530]" role="img" aria-label="Diavola spicy pizza with salami, spinach, chili and Parmesan">
-                <div class="h-48 bg-cover bg-center" style="background-image: url('/images/diavola.jpg')"></div>
+            <div class="card rounded-3xl overflow-hidden border border-[#D86B4A]/60" role="img" aria-label="Diavola spicy pizza with salami, spinach, chili and Parmesan">
+                <div class="relative h-48 bg-cover bg-center" style="background-image: url('/images/diavola.jpg')">
+                    <span class="menu-badge absolute top-3 left-3">Most popular</span>
+                </div>
                 <div class="p-5">
-                    <div class="font-semibold text-xl mb-1">Diavola</div>
+                    <div class="flex items-center justify-between gap-3 mb-1">
+                        <div class="font-semibold text-xl">Diavola</div>
+                        <div class="text-sm font-semibold text-[#D86B4A]">$30.50</div>
+                    </div>
                     <div class="text-sm text-[#B8A99A] mb-3">Tomato sauce, Fior di Latte, Salami, Spinach, Chili, Parmesan.</div>
                     <div class="text-xs text-[#8B7B6B]">Our signature spicy favourite.</div>
                 </div>
@@ -254,7 +316,10 @@
             <div class="card rounded-3xl overflow-hidden border border-[#3A3530]" role="img" aria-label="Zola pizza with Gorgonzola, salami and rocket salad">
                 <div class="h-48 bg-cover bg-center" style="background-image: url('/images/zola.jpg')"></div>
                 <div class="p-5">
-                    <div class="font-semibold text-xl mb-1">Zola</div>
+                    <div class="flex items-center justify-between gap-3 mb-1">
+                        <div class="font-semibold text-xl">Zola</div>
+                        <div class="text-sm font-semibold text-[#D86B4A]">$33</div>
+                    </div>
                     <div class="text-sm text-[#B8A99A] mb-3">Tomato sauce, Fior di Latte, Gorgonzola, Salami, Rocket salad.</div>
                     <div class="text-xs text-[#8B7B6B]">Bold and flavourful.</div>
                 </div>
@@ -264,7 +329,10 @@
             <div class="card rounded-3xl overflow-hidden border border-[#3A3530]" role="img" aria-label="Homemade Tiramisu dessert with mascarpone, savoiardi and espresso">
                 <div class="h-48 bg-cover bg-center" style="background-image: url('/images/desserts.jpg')"></div>
                 <div class="p-5">
-                    <div class="font-semibold text-xl mb-1">Tiramisu</div>
+                    <div class="flex items-center justify-between gap-3 mb-1">
+                        <div class="font-semibold text-xl">Tiramisu</div>
+                        <div class="text-sm font-semibold text-[#D86B4A]">$16.50</div>
+                    </div>
                     <div class="text-sm text-[#B8A99A] mb-3">Homemade with Zabaione, Mascarpone, Savoiardi, Espresso.</div>
                     <div class="text-xs text-[#8B7B6B]">Classic Italian dessert.</div>
                 </div>
@@ -281,13 +349,45 @@
         </div>
     </section>
 
+    <!-- Reviews -->
+    <section class="bg-[#1C1816] border-y border-[#3A3530] py-14">
+        <div class="max-w-screen-xl mx-auto px-6">
+            <div class="text-center mb-10">
+                <div class="uppercase tracking-[3px] text-xs font-semibold text-[#D86B4A] mb-3">GUEST REVIEWS</div>
+                <h2 class="heading-serif text-4xl tracking-tighter">Loved by locals and visitors</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <blockquote class="bg-[#211E1B] border border-[#3A3530] rounded-3xl p-6">
+                    <div class="flex items-center gap-x-1 text-[#E8C9A0] text-sm mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-[#D4B89A] text-sm leading-relaxed mb-4">&ldquo;Blown away — some of the best pizza we&rsquo;ve ever had, even compared to New York. Super welcoming staff and a great atmosphere.&rdquo;</p>
+                    <footer class="text-xs text-[#8B7B6B]">Kevin B. <span class="text-[#6B5D50]">• Google review</span></footer>
+                </blockquote>
+                <blockquote class="bg-[#211E1B] border border-[#3A3530] rounded-3xl p-6">
+                    <div class="flex items-center gap-x-1 text-[#E8C9A0] text-sm mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-[#D4B89A] text-sm leading-relaxed mb-4">&ldquo;The dough was nice and chewy with a good fragrance. Ordered the Diavola — flavours were on point. I&rsquo;d definitely come back.&rdquo;</p>
+                    <footer class="text-xs text-[#8B7B6B]">Damian P. <span class="text-[#6B5D50]">• Google review</span></footer>
+                </blockquote>
+                <blockquote class="bg-[#211E1B] border border-[#3A3530] rounded-3xl p-6">
+                    <div class="flex items-center gap-x-1 text-[#E8C9A0] text-sm mb-4">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-[#D4B89A] text-sm leading-relaxed mb-4">&ldquo;Hands down the best pizzeria in New Zealand so far. Reminds us of Napoli — unforgettable pizza, fantastic staff, great atmosphere.&rdquo;</p>
+                    <footer class="text-xs text-[#8B7B6B]">Patrick I. <span class="text-[#6B5D50]">• Google review</span></footer>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+
     <!-- Book a Table -->
     <section id="book" class="max-w-screen-xl mx-auto px-6 py-16">
         <div class="max-w-2xl mx-auto text-center mb-10">
             <div class="uppercase tracking-[3px] text-xs font-semibold text-[#D86B4A] mb-3">RESERVATIONS</div>
             <h2 class="heading-serif text-5xl tracking-tighter mb-4">Book a table online</h2>
-            <p class="text-lg text-[#D4B89A] max-w-md mx-auto">We use ResDiary for online reservations. Book your table in seconds — perfect for lunch or dinner, especially on weekends when tables are limited.</p>
-            <p class="text-sm text-[#D86B4A] font-semibold mt-4">For parties of 6 or more, please call us on <a href="tel:+6493020645" class="underline hover:text-white">09 302 0645</a> to book.</p>
+            <p class="text-lg text-[#D4B89A] max-w-md mx-auto">Book your table in seconds — especially recommended on weekends when tables fill quickly.</p>
         </div>
 
         <div class="max-w-[620px] mx-auto">
@@ -295,7 +395,7 @@
                 <div class="text-center mb-8">
                     <i class="fa-solid fa-calendar-check text-5xl text-[#D86B4A]"></i>
                     <h3 class="text-2xl font-semibold tracking-tight mt-4 mb-2">Reserve your table</h3>
-                    <p class="text-[#B8A99A]">Use the live booking system below. Instant confirmation.</p>
+                    <p class="text-[#B8A99A]">Instant confirmation. Modify or cancel online anytime.</p>
                 </div>
 
                 <div class="mb-6 rounded-2xl border border-[#D86B4A]/40 bg-[#2C2522] px-5 py-4 text-center text-sm text-[#D4B89A]">
@@ -305,7 +405,7 @@
                 <div id="rd-widget-frame" style="max-width: 100%; margin: 0 auto;"></div>
 
                 <div class="mt-6 text-center text-xs text-[#8B7B6B]">
-                    Powered by ResDiary • Modify or cancel your booking online anytime
+                    Instant confirmation • Modify or cancel your booking online anytime
                 </div>
             </div>
 
@@ -320,8 +420,9 @@
         <div class="max-w-screen-xl mx-auto px-6">
             <div class="grid md:grid-cols-2 gap-x-16 gap-y-10 items-center">
                 <div>
-                    <div class="uppercase tracking-[3px] text-xs font-semibold text-[#D86B4A] mb-3">NEW LOCATION</div>
-                    <h3 class="heading-serif text-4xl tracking-tighter mb-6">Come and see us in the CBD</h3>
+                    <div class="uppercase tracking-[3px] text-xs font-semibold text-[#D86B4A] mb-3">VISIT US</div>
+                    <h3 class="heading-serif text-4xl tracking-tighter mb-3">Come and see us in the CBD</h3>
+                    <p class="text-sm text-[#B8A99A] mb-6">5 minutes from Britomart — easy to reach after work or before a show.</p>
                     
                     <div class="space-y-5 text-[15px]">
                         <div>
@@ -330,12 +431,27 @@
                                 <span>Address</span>
                             </div>
                             <div class="pl-7 text-[#D4B89A]">57 Fort Street<br>Auckland CBD, Auckland 1010</div>
+                            <div class="pl-7 mt-3 flex flex-wrap gap-3">
+                                <a href="https://www.google.com/maps/dir/?api=1&destination=That%27s+Amore,+57+Fort+Street,+Auckland+CBD,+Auckland+1010,+New+Zealand" target="_blank" rel="noopener" class="inline-flex items-center gap-x-2 px-4 py-2 rounded-xl border border-[#D86B4A] text-[#D86B4A] hover:bg-[#D86B4A] hover:text-white transition-colors text-sm font-medium">
+                                    <i class="fa-solid fa-diamond-turn-right"></i>
+                                    <span>Get directions</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="font-semibold flex items-center gap-x-2">
+                                <i class="fa-solid fa-square-parking w-5 text-[#D86B4A]"></i>
+                                <span>Parking</span>
+                            </div>
+                            <div class="pl-7 text-[#D4B89A] text-sm">Street parking nearby, plus Wilson and Victoria Street car parks within a short walk.</div>
                         </div>
                         
                         <div>
                             <div class="font-semibold flex items-center gap-x-2">
                                 <i class="fa-solid fa-clock w-5 text-[#D86B4A]"></i>
                                 <span>Opening Hours</span>
+                                <span id="open-status" class="ml-2 text-xs font-semibold px-2 py-0.5 rounded-full bg-[#211E1B] text-[#8B7B6B]"></span>
                             </div>
                             <div class="pl-7 text-[#D4B89A] space-y-0.5">
                                 <div>Monday – Sunday: 5:00 pm – 9:30 pm</div>
@@ -378,6 +494,34 @@
         </div>
     </section>
 
+    <!-- Instagram -->
+    <section class="max-w-screen-xl mx-auto px-6 py-14">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-8">
+            <div>
+                <div class="uppercase tracking-[3px] text-xs font-semibold text-[#D86B4A] mb-3">FOLLOW US</div>
+                <h2 class="heading-serif text-4xl tracking-tighter">See what&rsquo;s coming out of the kitchen</h2>
+            </div>
+            <a href="https://www.instagram.com/thatsamorecbd/" target="_blank" rel="noopener" class="inline-flex items-center gap-x-2 text-sm font-semibold text-[#D86B4A] hover:underline">
+                <i class="fa-brands fa-instagram"></i>
+                <span>@thatsamorecbd on Instagram</span>
+            </a>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <a href="https://www.instagram.com/thatsamorecbd/" target="_blank" rel="noopener" class="rounded-2xl overflow-hidden border border-[#3A3530] hover:border-[#D86B4A]/50 transition-colors">
+                <img src="/images/margherita.jpg" alt="Margherita pizza at That's Amore" class="w-full h-40 object-cover" loading="lazy">
+            </a>
+            <a href="https://www.instagram.com/thatsamorecbd/" target="_blank" rel="noopener" class="rounded-2xl overflow-hidden border border-[#3A3530] hover:border-[#D86B4A]/50 transition-colors">
+                <img src="/images/diavola.jpg" alt="Diavola pizza at That's Amore" class="w-full h-40 object-cover" loading="lazy">
+            </a>
+            <a href="https://www.instagram.com/thatsamorecbd/" target="_blank" rel="noopener" class="rounded-2xl overflow-hidden border border-[#3A3530] hover:border-[#D86B4A]/50 transition-colors">
+                <img src="/images/zola.jpg" alt="Zola pizza at That's Amore" class="w-full h-40 object-cover" loading="lazy">
+            </a>
+            <a href="https://www.instagram.com/thatsamorecbd/" target="_blank" rel="noopener" class="rounded-2xl overflow-hidden border border-[#3A3530] hover:border-[#D86B4A]/50 transition-colors">
+                <img src="/images/desserts.jpg" alt="Desserts at That's Amore" class="w-full h-40 object-cover" loading="lazy">
+            </a>
+        </div>
+    </section>
+
     <!-- Final CTA -->
     <div class="max-w-screen-xl mx-auto px-6 py-12 text-center">
         <div class="max-w-md mx-auto">
@@ -403,7 +547,7 @@
                 <div>
                     <div class="flex items-center gap-x-3 mb-3">
                         <a href="/">
-                            <img src="/images/WebsiteLogo_web_1200.webp" alt="That's Amore" class="h-[85px] w-auto">
+                            <img src="/images/WebsiteLogo_web_1200.webp" alt="That's Amore" class="h-14 md:h-[85px] w-auto">
                         </a>
                     </div>
                     <div class="text-xs">Authentic Neapolitan pizza in Auckland since 2008</div>
@@ -416,13 +560,13 @@
                     </div>
                     <div>
                         <div class="font-semibold text-white mb-2">Contact</div>
-                        <div>09 302 0645<br>info@thatsamore.co.nz</div>
+                        <div>09 302 0645<br><a href="mailto:info@thatsamore.co.nz" class="hover:text-white">info@thatsamore.co.nz</a></div>
                     </div>
                     <div>
                         <div class="font-semibold text-white mb-2">Follow</div>
                         <div class="flex gap-x-4">
-                            <a href="https://www.instagram.com/thatsamorecbd/" target="_blank" rel="noopener" class="hover:text-white"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="https://www.facebook.com/thatsamorecbd/" target="_blank" rel="noopener" class="hover:text-white"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/thatsamorecbd/" target="_blank" rel="noopener" aria-label="Instagram" class="hover:text-white"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/thatsamorecbd/" target="_blank" rel="noopener" aria-label="Facebook" class="hover:text-white"><i class="fa-brands fa-facebook"></i></a>
                         </div>
                     </div>
                 </div>
@@ -438,6 +582,20 @@
             </div>
         </div>
     </footer>
+
+    <!-- Sticky mobile book bar -->
+    <div id="sticky-book-bar" class="sticky-book-bar fixed bottom-0 inset-x-0 z-50 md:hidden bg-[#1C1816]/95 backdrop-blur-lg border-t border-[#3A3530] px-4 py-3">
+        <div class="flex gap-3">
+            <a href="#book" class="btn-primary flex-1 text-white text-sm font-semibold py-3 rounded-xl flex items-center justify-center gap-x-2">
+                <i class="fa-solid fa-calendar-check"></i>
+                <span>Book a table</span>
+            </a>
+            <a href="tel:+6493020645" class="flex-1 border border-[#D86B4A] text-[#D86B4A] text-sm font-semibold py-3 rounded-xl flex items-center justify-center gap-x-2">
+                <i class="fa-solid fa-phone"></i>
+                <span>Call</span>
+            </a>
+        </div>
+    </div>
 
     <script>
         function initNavbar() {
@@ -493,10 +651,52 @@
             });
         }
 
+        function initOpenStatus() {
+            const statusEl = document.getElementById('open-status');
+            if (!statusEl) return;
+
+            const now = new Date();
+            const parts = new Intl.DateTimeFormat('en-NZ', {
+                timeZone: 'Pacific/Auckland',
+                hour: 'numeric',
+                minute: 'numeric',
+                hour12: false,
+                weekday: 'short'
+            }).formatToParts(now);
+
+            const hour = Number(parts.find((part) => part.type === 'hour').value);
+            const minute = Number(parts.find((part) => part.type === 'minute').value);
+            const minutes = hour * 60 + minute;
+            const openMinutes = 17 * 60;
+            const closeMinutes = 21 * 60 + 30;
+            const isOpen = minutes >= openMinutes && minutes < closeMinutes;
+
+            statusEl.textContent = isOpen ? 'Open now' : 'Closed now';
+            statusEl.classList.toggle('text-[#8FD694]', isOpen);
+            statusEl.classList.toggle('bg-[#1F2A1F]', isOpen);
+            statusEl.classList.toggle('text-[#8B7B6B]', !isOpen);
+            statusEl.classList.toggle('bg-[#211E1B]', !isOpen);
+        }
+
+        function initStickyBookBar() {
+            const bar = document.getElementById('sticky-book-bar');
+            if (!bar) return;
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 480) {
+                    bar.classList.add('is-visible');
+                } else {
+                    bar.classList.remove('is-visible');
+                }
+            }, { passive: true });
+        }
+
         function init() {
             initNavbar();
             initMobileMenu();
             initSmoothScroll();
+            initOpenStatus();
+            initStickyBookBar();
         }
 
         document.addEventListener('DOMContentLoaded', init);
