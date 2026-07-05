@@ -84,15 +84,10 @@
     <nav id="navbar" class="bg-[#1C1816] border-b border-[#3A3530] sticky top-0 z-50">
         <div class="max-w-screen-xl mx-auto">
             <div class="px-6 py-5 flex items-center justify-between">
-                <div class="flex items-center gap-x-3">
-                    <div class="w-9 h-9 bg-[#D86B4A] rounded-full flex items-center justify-center">
-                        <span class="text-white text-2xl font-bold tracking-tighter">TA</span>
-                    </div>
-                    <div>
-                        <div class="font-semibold text-2xl tracking-tight">That's Amore</div>
-                        <div class="text-[10px] text-[#8B7B6B] -mt-1">NEAPOLITAN PIZZA</div>
-                    </div>
-                </div>
+                <!-- Logo -->
+                <a href="/" class="flex items-center">
+                    <img src="/images/WebsiteLogo_web_1200.webp" alt="That's Amore" class="h-9 w-auto">
+                </a>
 
                 <div class="hidden md:flex items-center gap-x-9 text-sm font-medium">
                     <a href="#menu" class="nav-link text-[#F5EDE3]">Menu</a>
@@ -526,7 +521,7 @@
             initNavbar();
             initMobileMenu();
             initSmoothScroll();
-            console.log('%c[That\'s Amore] Dark theme applied successfully.', 'color:#8B7B6B');
+            console.log('%c[That\'s Amore] Logo updated in navbar.', 'color:#8B7B6B');
         }
 
         window.onload = init;
