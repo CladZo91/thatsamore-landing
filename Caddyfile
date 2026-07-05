@@ -1,18 +1,24 @@
 # That's Amore Landing Page
-thatsamore.nz {
-    root * /srv
-    file_server
-    encode gzip
+
+(site_security) {
+    @blocked {
+        path /.git* /.git/* /.env* /Caddyfile /docker-compose* /compose*
+    }
+    respond @blocked 404
 
     header {
-        Strict-Transport-Security "max-age=31536000;"
+        Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
         X-Content-Type-Options "nosniff"
         X-Frame-Options "DENY"
         Referrer-Policy "strict-origin-when-cross-origin"
+        Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
+        Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com https://booking.resdiary.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; frame-src https://www.google.com https://booking.resdiary.com; connect-src 'self' https://booking.resdiary.com https://cloudflareinsights.com https://static.cloudflareinsights.com"
     }
 }
 
 :80 {
     root * /srv
+    encode gzip
+    import site_security
     file_server
 }
