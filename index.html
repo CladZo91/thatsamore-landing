@@ -127,9 +127,10 @@
         
         <div class="relative max-w-screen-xl mx-auto px-6 text-center text-white z-10">
             <div class="max-w-3xl mx-auto">
-                <div class="inline-flex items-center gap-x-2 bg-white/10 backdrop-blur-md px-4 py-1 rounded-full mb-6 border border-white/20">
-                    <div class="w-2 h-2 bg-[#D86B4A] rounded-full animate-pulse"></div>
-                    <span class="text-sm font-medium tracking-wider">OPEN SINCE 2008 • NEW CBD LOCATION</span>
+                <div class="inline-flex flex-wrap items-center justify-center gap-x-2 gap-y-1 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full mb-6 border border-white/20">
+                    <div id="hero-open-dot" data-open-dot class="w-2 h-2 rounded-full bg-white/40"></div>
+                    <span class="text-sm font-medium tracking-wide">Established 2008 • New CBD location</span>
+                    <span id="hero-open-status" data-open-status class="text-xs font-semibold px-2 py-0.5 rounded-full bg-white/10 text-white/60"></span>
                 </div>
 
                 <h1 class="heading-serif text-6xl md:text-7xl leading-[1.05] tracking-tighter mb-4">
@@ -181,7 +182,7 @@
                 </div>
                 <div class="flex items-center gap-x-2">
                     <i class="fa-solid fa-check text-[#D86B4A]"></i>
-                    <span>Open since 2008 • New CBD location</span>
+                    <span>Established 2008 • New CBD location</span>
                 </div>
             </div>
         </div>
@@ -425,7 +426,7 @@
                             <div class="font-semibold flex items-center gap-x-2">
                                 <i class="fa-solid fa-clock w-5 text-[#D86B4A]"></i>
                                 <span>Opening Hours</span>
-                                <span id="open-status" class="ml-2 text-xs font-semibold px-2 py-0.5 rounded-full bg-[#211E1B] text-[#8B7B6B]"></span>
+                                <span id="open-status" data-open-status class="ml-2 text-xs font-semibold px-2 py-0.5 rounded-full bg-[#211E1B] text-[#8B7B6B]"></span>
                             </div>
                             <div class="pl-7 text-[#D4B89A] space-y-0.5">
                                 <div>Monday to Sunday: 5:00 pm to 9:30 pm</div>
@@ -625,28 +626,60 @@
             });
         }
 
-        function setOpenStatusBadge(isOpen) {
-            const statusEl = document.getElementById('open-status');
-            if (!statusEl) return;
+        const openStatusClasses = {
+            badge: {
+                open: ['text-[#8FD694]', 'bg-[#1F2A1F]'],
+                closed: ['text-[#F87171]', 'bg-[#2A1F1F]'],
+                neutral: ['text-[#8B7B6B]', 'bg-[#211E1B]']
+            },
+            heroBadge: {
+                open: ['text-[#86EFAC]', 'bg-emerald-900/50'],
+                closed: ['text-[#FCA5A5]', 'bg-red-900/50'],
+                neutral: ['text-white/60', 'bg-white/10']
+            },
+            dot: {
+                open: ['bg-[#4ADE80]'],
+                closed: ['bg-[#F87171]'],
+                neutral: ['bg-white/40']
+            }
+        };
 
-            statusEl.textContent = isOpen ? 'Open now' : 'Closed now';
-            statusEl.classList.toggle('text-[#8FD694]', isOpen);
-            statusEl.classList.toggle('bg-[#1F2A1F]', isOpen);
-            statusEl.classList.toggle('text-[#8B7B6B]', !isOpen);
-            statusEl.classList.toggle('bg-[#211E1B]', !isOpen);
+        function applyStatusClasses(el, state, palette) {
+            const allClasses = [
+                ...openStatusClasses[palette].open,
+                ...openStatusClasses[palette].closed,
+                ...openStatusClasses[palette].neutral
+            ];
+            el.classList.remove(...allClasses);
+            el.classList.add(...openStatusClasses[palette][state]);
+        }
+
+        function setOpenStatusBadge(isOpen) {
+            document.querySelectorAll('[data-open-status]').forEach((statusEl) => {
+                statusEl.textContent = isOpen ? 'Open now' : 'Closed now';
+                const palette = statusEl.id === 'hero-open-status' ? 'heroBadge' : 'badge';
+                applyStatusClasses(statusEl, isOpen ? 'open' : 'closed', palette);
+            });
+
+            document.querySelectorAll('[data-open-dot]').forEach((dotEl) => {
+                applyStatusClasses(dotEl, isOpen ? 'open' : 'closed', 'dot');
+            });
         }
 
         function setOpenStatusFallback() {
-            const statusEl = document.getElementById('open-status');
-            if (!statusEl) return;
+            document.querySelectorAll('[data-open-status]').forEach((statusEl) => {
+                statusEl.innerHTML = '<a href="https://www.google.com/maps/place/?q=place_id:ChIJm3LCE_tHDW0RKdTFCbnH-yY" target="_blank" rel="noopener" class="text-[#D86B4A] hover:underline">Hours on Google Maps</a>';
+                const palette = statusEl.id === 'hero-open-status' ? 'heroBadge' : 'badge';
+                applyStatusClasses(statusEl, 'neutral', palette);
+            });
 
-            statusEl.innerHTML = '<a href="https://www.google.com/maps/place/?q=place_id:ChIJm3LCE_tHDW0RKdTFCbnH-yY" target="_blank" rel="noopener" class="text-[#D86B4A] hover:underline">Hours on Google Maps</a>';
-            statusEl.classList.add('text-[#8B7B6B]', 'bg-[#211E1B]');
+            document.querySelectorAll('[data-open-dot]').forEach((dotEl) => {
+                applyStatusClasses(dotEl, 'neutral', 'dot');
+            });
         }
 
         function initGoogleOpenStatus() {
-            const statusEl = document.getElementById('open-status');
-            if (!statusEl || !window.google?.maps?.places) {
+            if (!document.querySelector('[data-open-status]') || !window.google?.maps?.places) {
                 setOpenStatusFallback();
                 return;
             }
